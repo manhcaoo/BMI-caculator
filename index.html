@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI cacualator</title>
+  </head>
+  <body>
+    <h3>Insert your weight below</h3>
+    <input id="weightInput" type="text" />
+    <h3>Insert your height below</h3>
+    
+    <input id="heightInput" type="text" />
+    <br>
+  </br>
+    <button onclick="clickButton()">Check</button>
+    <p>result: <p id="result"></p></p>
+
+    <script>
+
+           function clickButton() {
+
+            let weightInput = +document.getElementById("weightInput").value
+            let heightInput = +document.getElementById("heightInput").value
+            let bmi = weightInput / ( heightInput  * heightInput )
+            let result = document.getElementById("result")
+            alert(bmi);
+
+if(bmi < 18){
+  result.innerText =("Underweight");
+}else if (bmi < 25){
+  result.innerText=("Normal");
+}else if (bmi < 30){
+  result.innerText=("Overweight")
+} else {
+result.innerText =("Obese")
+
+}
+            
+            }
+
+
+
+           
+    </script>
+  </body>
+</html>
